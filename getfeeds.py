@@ -1,5 +1,6 @@
 import pprint
 import requests
+import json
 from OTXv2 import OTXv2
 from collections import defaultdict
 from datetime import datetime, timedelta
@@ -45,7 +46,7 @@ def get_alienvault():
     return d
 
 
-# Get Malc0de feed IP addresses
+# Malc0de feed
 def get_malc0de():
     url = 'http://malc0de.com/bl/IP_Blacklist.txt'
     results = download_file(url).splitlines()
