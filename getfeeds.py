@@ -66,6 +66,13 @@ def get_source(url, key):
                     d[key].append(ip)
 
 def write_list(f, key, name):
+    """
+    Writes different lists to the txt files mentioned
+    :param f: The open file
+    :param key: The key used in the list, for example "malc0deip"
+    :param name: The name you want to have after the IP's or domains in the
+    output file
+    """
     f.write("".join("{}\t[{}]\n".format(t, name) for t in d[key]))
 
 def get_alienvault(days):
