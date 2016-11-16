@@ -1,3 +1,5 @@
 *
 !.gitignore
 !getfeeds.py
+!requirements.txt
+!README.md
