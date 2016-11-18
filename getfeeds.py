@@ -6,18 +6,17 @@ Intelligence feeds script | Made by Marius Iversen
 
 import requests
 import re
-
 from OTXv2 import OTXv2
+
 from collections import defaultdict
 from datetime import datetime, timedelta
 
 # Defines the list that is going to populate the different feeds
 d = defaultdict(list)
 
-# Your API key for OTX. If you do not have any, please comment out
-# "get_alienvault" in the main function.
-otx = OTXv2("OTXAPIKEY")
-
+# Your API key for OTX. If you do not wish to use this, please comment out
+# "get_alienvault" in the main function at the bottom.
+otx = OTXv2("XXX")
 # Amount of days old feeds you want to get returned (Alienvault OTX only)
 days = 10
 
@@ -40,7 +39,7 @@ def download_file(url):
     """
 
     r = requests.get(url)
-    return r.content
+    return r.text
 
 def ipgrabber(results):
     """
